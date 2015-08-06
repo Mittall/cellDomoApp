@@ -1,0 +1,13 @@
+<b><u>Category wise products detail page.</u></b>
+
+<% @categories.each do |category| %>
+  <ul>
+    <li>Category Name : <b><%= category.cname %></b></li><hr/>
+      <% category.products.each do |product| %>
+        <ul>
+          <li><b>Name : </b><%= product.name %></li>
+          <li><b>Price : </b><%= product.price %></li>
+        </ul><br/>
+      <% end %>
+  </ul>
+<% end %>
